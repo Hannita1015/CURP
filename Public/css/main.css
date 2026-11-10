@@ -1,0 +1,192 @@
+
+body {
+    background-image: url("../img/fondoo.jpg"); 
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: rgba(10, 10, 50, 0.5);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgb(167, 170, 247); /* Sombra más oscura para el fondo negro */
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+.titulo-principal {
+    text-decoration: none;
+    color: #f1f1f1;
+    padding: 10px;
+    margin: 10px auto; /* Centrado */
+    width: 70%;
+    text-align: center;
+    border: 6px solid #1a0071;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    display: block;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px; 
+    letter-spacing: 3px;
+    position: relative;    
+    display: inline-block;
+    text-shadow: 4px 4px 0px #0b0037; 
+}
+
+.img-responsiva {
+    max-width: 30%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.img-centro {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.campo {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+    gap: 15px;
+}
+
+.flex-row > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #a1a9f8; 
+}
+
+input, select {
+    padding: 10px;
+    border: 2px solid #a1a9f8;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #ffffff; 
+    color: #0A1123; 
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: #8387C3;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #837aff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(144, 184, 247);
+    border: 2px solid #001242;
+}
+
+.resultado-box {
+    text-decoration: none;
+    color: #f1f1f1;
+    padding: 10px;
+    margin: 10px auto; /* Centrado */
+    width: 70%;
+    text-align: center;
+    background-color: rgba(136, 80, 239, 0.6);
+    border-radius: 10px;
+    display: block;
+}
+
+#resultadoCURP {
+    text-decoration: none;
+    font-size: 25px;
+    color: #f1f1f1;
+    padding: 10px 20px;
+    margin: 10px auto; /* Centrado */
+    width: fit-content;
+    max-width: 95%;
+    text-align: center;
+    background-color: rgba(158, 75, 241, 0.6);
+    border-radius: 10px;
+    display: block;
+}
+
+.swal2-title {
+  text-shadow: none !important;
+}
+
+/* =========================================
+   DISEÑO RESPONSIVO (Para celulares y tablets pequeñas)
+   ========================================= */
+
+@media screen and (max-width: 600px) {
+    /* 1. Apilamos los campos que estaban uno al lado del otro */
+    .flex-row {
+        flex-direction: column;
+        gap: 15px; 
+    }
+
+    /* 2. Reducimos el tamaño de la letra del título principal */
+    h2 {
+        font-size: 32px; 
+        letter-spacing: 2px;
+    }
+
+    .titulo-principal {
+        width: 90%; /* Le damos más ancho para que quepa bien el texto */
+        padding: 8px;
+    }
+
+    /* 3. Ajustamos los espacios del contenedor principal */
+    .contenedor {
+        padding: 20px 15px; /* Menos relleno interno en móviles */
+        margin: 30px 15px; /* Margen lateral para que no toque los bordes de la pantalla */
+        width: auto;
+    }
+
+    /* 4. Ajustamos la imagen responsiva para que no se vea tan chiquita en el celular */
+    .img-responsiva {
+        max-width: 45%;
+    }
+
+    /* 5. Ajustamos el tamaño del texto del resultado de la CURP */
+    #resultadoCURP {
+        font-size: 20px;
+        padding: 10px;
+    }
+}

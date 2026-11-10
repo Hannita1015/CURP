@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURP EC</title>
+    <link rel="stylesheet" href="./Public/css/main.css">
+    <script src="./Public/js/alert.js"></script>
+    <link rel="shortcut icon" href="./Public/img/fondoof.jpeg" type="image/x-icon">
+</head>
+<body>
+
+    <div class="contenedor">
+        <h2 class="titulo-principal" >Genera tu curp</h2>
+        <img class="img-centro img-responsiva" src="./Public/img/curppp.gif" alt="logo">
+        <form id="curpForm">
+            <div class="campo">
+                <label for="nombre">Nombre(s):</label>
+                <input type="text" id="nombre" required>
+            </div>
+            
+            <div class="campo flex-row">
+                <div>
+                    <label for="paterno">Apellido Paterno:</label>
+                    <input type="text" id="a_paterno" required>
+                </div>
+                <div>
+                    <label for="materno">Apellido Materno:</label>
+                    <input type="text" id="a_materno" required>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label for="fecha">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" required>
+            </div>
+
+            <div class="campo flex-row">
+                <div>
+                    <label for="genero">Género:</label>
+                    <select id="genero" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="H">Hombre</option>
+                        <option value="M">Mujer</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="estado">Estado de Nacimiento:</label>
+                    <select id="estado" required>
+                        <option value="AC">Aguascalientes</option>
+                        <option value="BS">Baja California Sur</option>
+                        <option value="CL">Coahuila</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="GT">Guanajuato</option>
+                        <option value="HG">Hidalgo</option>
+                        <option value="MC">Estado de México</option>
+                        <option value="MS">Morelos</option>
+                        <option value="NL">Nuevo León</option>
+                        <option value="PL">Puebla</option>
+                        <option value="QR">Quintana Roo</option>
+                        <option value="SL">Sinaloa</option>
+                        <option value="TC">Tabasco</option>
+                        <option value="TL">Tlaxcala</option>
+                        <option value="YN">Yucatán</option>
+                        <option value="BC">Baja California</option>
+                        <option value="CC">Campeche</option>
+                        <option value="CM">Colima</option>
+                        <option value="CH">Chihuahua</option>
+                        <option value="DG">Durango</option>
+                        <option value="GR">Guerrero</option>
+                        <option value="JC">Jalisco</option>
+                        <option value="MN">Michoacan</option>
+                        <option value="NT">Nayarit</option>
+                        <option value="OC">Oaxaca</option>
+                        <option value="QT">Queretaro</option>
+                        <option value="SP">San Luis Potosí</option>
+                        <option value="SR">Sonora</option>
+                        <option value="TS">Tamaulipas</option>
+                        <option value="VZ">Veracruz</option>
+                        <option value="ZS">Zacatecas</option>
+                        <option value="NE">Nacido en el extranjero</option>
+                        </select>
+                </div>
+            </div>
+
+            <button type="button" onclick="calcularCURP()">Generar CURP</button>
+        </form>
+
+        <div class="resultado-box">
+            <h3>Tu CURP es:</h3>
+            <p id="resultadoCURP">---</p>
+        </div>
+    </div>
+
+    <script src="./Public/js/index.js"></script>
+</body>
+</html>
