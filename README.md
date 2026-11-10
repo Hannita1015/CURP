@@ -1,2 +1,0 @@
-# CURP
-Generador de curp
